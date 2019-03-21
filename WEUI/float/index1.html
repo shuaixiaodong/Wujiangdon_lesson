@@ -17,7 +17,9 @@
     }
     .content{
       padding: 0 200px;
+      overflow: hidden;
       /* float: left; */
+      /* display: table; */
     }
     .text{
       text-align: center;
@@ -49,9 +51,16 @@
       position: relative;
       left: 200px;
     }
-    .clearfix{
+    /* .clearfix{
         float: left;
-    }
+    } */
+    /* .content::after{
+      content:".";
+      clear:both;
+      display:block;
+       height:0;
+      visibility: hidden; 
+    } */ 
   </style>
 </head>
 <body>
