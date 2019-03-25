@@ -12,3 +12,19 @@ Block Formatting Context(块级格式化上下文)
 3. 行内块级inline-block
 4. 表格单元display: inline-block、table-cell、flex、table-caption或者inline-flex
 5. 绝对定位（absolute,fixed）
+
+flex-grow 是扩展比率
+flex-shrink 是收缩比率
+flex-basis 伸缩基准值
+假设flex盒子父级宽度固定为800px；
+Flex-grow、Flex-shrink、Flex-basis 是Flex属性的分写模式；
+如
+.box {
+flex: 4 3 100px;
+}
+等于
+.box {
+flex-grow: 4;
+flex-shrink: 3;
+flex-basis: 100px;
+}
