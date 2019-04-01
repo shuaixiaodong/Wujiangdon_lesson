@@ -1,0 +1,8 @@
+#anony_nav{
+    width: 950px;
+    margin: 0 auto 25px;
+}
+#anony_nav .anony_nav_links{
+    float: right;
+    margin-top: 6px;
+}
