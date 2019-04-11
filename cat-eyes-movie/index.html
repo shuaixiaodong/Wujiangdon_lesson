@@ -101,6 +101,43 @@
         </li> -->
       </ul>
     </section>
+    <!-- section4 -->
+    <section class="movie-booking section-seperate section-expander">
+      <p class="section-til">票房</p>
+      <div class="weui-flex">
+        <div class="weui-flex__item">
+          <div class="placeholder">
+            <span id="ranking"></span>
+            <p>昨日票房排行</p>
+          </div>
+        </div>
+        <div class="weui-flex__item">
+          <div class="placeholder">
+            <span id="bookingWeek"></span>
+            <p>首周票房(万)</p>
+          </div>
+        </div>
+        <div class="weui-flex__item">
+          <div class="placeholder">
+            <span id="bookingTotal"></span>
+            <p>累计票房(万)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section5 -->
+    <section class="movie-photo section-seperate">
+      <p class="action-list section-til">视频和剧照</p>
+      <ul class="movie-photo__lists">
+        <!-- <li class="stage-img-container">
+          <a href="#" class="link">
+            <div class="movie-celebrities__pic">
+              <img src="http://p1.meituan.net/moviemachine/6e06b1eee9a74c9573fdb8150fb8561271624.jpg@130w_180h.webp" alt="">
+            </div>
+          </a>
+        </li> -->
+      </ul>
+    </section>
     <!-- toast -->
     <div id="toast">
       <div class="weui-mask_transparent"></div>
@@ -129,6 +166,8 @@
           $('.movie-detail .date').html(res.data.date)
           $('.text-expander__content p').html(res.data.desc)
           celebrity(res.data.person)
+          booking(res.data.booking)
+          photo(res.data.pictures)
         }
       })
       function star(e) {
@@ -176,6 +215,24 @@
             </div>
             <span class="movie-celebrities__nick">${n.name}</span>
             <span class="movie-celebrities__roles">${n.sort}</span>
+          </a>
+        </li>`)
+        }
+      }
+      // 票房
+      function booking(e) {
+        $('#ranking').html(e.ranking)
+        $('#bookingWeek').html(e.bookingWeek)
+        $('#bookingTotal').html(e.bookingTotal)
+      }
+      // 剧照
+      function photo(array) {
+        for (let m of array) {
+          $('.movie-photo__lists').append(`<li class="stage-img-container">
+          <a href="#" class="link">
+            <div class="movie-celebrities__pic">
+              <img src="${m}" alt="">
+            </div>
           </a>
         </li>`)
         }
