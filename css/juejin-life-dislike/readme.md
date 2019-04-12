@@ -1,0 +1,3 @@
+svg
+click
+defaultArr 将json对象转化为字符串
