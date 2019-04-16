@@ -10,3 +10,37 @@
     float: right;
     margin-top: 6px;
 }
+#anony_nav .anony_nav_links li{
+    display: inline-block;
+    zoom: 1;
+    margin: 0 0 0 17px;
+}
+#anony_nav h1 a{
+    display: block;
+    height: 34px;
+    line-height: 10em;
+}
+#anony_nav .anony_srh{
+    position: relative;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    width: 270px;
+    height: 30px;
+    border: 1px solid #c3c3c3;
+}
+#anony_nav .anony_srh .inp{
+    display: block;
+    height: 30px;
+    overflow: hidden;
+}
+#anony_nav .anony_srh .bn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url(https://img3.doubanio.com/f/sns/f71f15922ebd7c0ff0ea0e7a25577529efd8981a/pics/icon/bn_srh_1.png) 50% 50% no-repeat;
+}
