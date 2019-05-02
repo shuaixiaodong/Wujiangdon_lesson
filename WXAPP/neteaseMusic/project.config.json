@@ -13,9 +13,9 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.5",
-	"appid": "wxc99141baf03843e1",
-	"projectname": "%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9",
+	"libVersion": "2.6.6",
+	"appid": "wx6c06e88250a207a7",
+	"projectname": "neteaseMusic",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
