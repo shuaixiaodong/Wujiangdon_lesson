@@ -1,6 +1,7 @@
 <template>
   <div class="login">
     <i-form ref="formLogin" :model="formLogin" :rules="formLoginRules" class="card-box">
+      <!-- title -->
       <FormItem class="formLogin-title">
         <h3>系统登录</h3>
       </FormItem>
@@ -19,13 +20,13 @@
       <FormItem class="login-no-bottom">
         <Checkbox v-model="formLogin.remember">记住密码</Checkbox>
       </FormItem>
-      <FormItem class="Login-no-bottom">
+      <FormItem>
         <Row>
-          <i-col :xs="{ span: 4, offset: 6}">
-            <i-button type="primary" @click="handleSubmit('formLogin')">登陆</i-button>
+          <i-col :xs="{ span: 5, offset: 5}">
+            <Button type="primary" @click="handleSubmit('formLogin')">登陆</Button>
           </i-col>
-          <i-col :xs="{ span: 4, offset: 6}">
-            <i-button type="primary" @click="formLoginReset('formLogin')">重置</i-button>
+          <i-col :xs="{ span: 5, offset: 5}">
+            <Button type="primary">重置</Button>
           </i-col>
         </Row>
       </FormItem>
@@ -40,7 +41,7 @@ export default {
     return {
       formLogin: {
         username: "",
-        passward: "",
+        password: "",
         remember: false
       },
       formLoginRules: {
@@ -69,24 +70,22 @@ export default {
   },
   methods: {
     handleSubmit(name) {
-      this.$refs.formLogin[name].validate(valid=>{
-        sessionStorage.setItem('user',JSON.stringify(this.formLogin.username))
-        if(valid) {
-          this.$Message.success('提交成功'),
-          this.$router.push({ path: '/table' })
-        }else {
-          this.$Message.error('登录失败')
+      this.$refs[name].validate(valid => {
+        sessionStorage.setItem("user", this.formLogin.username);
+        if (valid) {
+          this.$Message.success("提交成功"),
+            this.$router.push({ path: "/table" });
+        } else {
+          this.$Message.error("失败");
         }
-        if(this.formLogin.remember) {
-          sessionStorage.setItem('username',JSON.stringify(this.formLogin.username))
-          sessionStorage.setItem('password',JSON.stringify(this.formLogin.password))
-        }else {
-          sessionStorage.removeItem('username')
-          sessionStorage.removeItem('password')
+        if (this.formLogin.remember) {
+          sessionStorage.setItem("username", this.formLogin.username);
+        } else {
+          sessionStorage.removeItem("username", this.formLogin.username);
         }
-      })
+      });
     }
-  },
+  }
 };
 </script>
 
@@ -94,7 +93,8 @@ export default {
 .login {
   width: 100%;
   height: 100%;
-  background: url(../assets/bg.jpg) no-repeat;
+  /* background-size: cover; */
+  background: url("../assets/bg.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
 }
@@ -127,7 +127,10 @@ export default {
 .login-no-bottom {
   margin-bottom: 10px;
 }
-.login-no-bottom {
+.ivu-form-item-content {
   text-align: center;
 }
 </style>
+
+
+
