@@ -1,12 +1,14 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/indexDetail/indexDetail",
+    "pages/strategeDetail/strategeDetail"
   ],
   "window": {
-    "backgroundColor": "#660099",
+    "backgroundColor": "#364999",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#660099",
+    "navigationBarBackgroundColor": "#364999",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -14,7 +16,7 @@
       {
         "pagePath": "pages/index/index",
         "iconPath": "images/mdd.png",
-        "selectedIconPath":"images/mdd1.png",
+        "selectedIconPath": "images/mdd1.png",
         "text": "目的地"
       },
       {

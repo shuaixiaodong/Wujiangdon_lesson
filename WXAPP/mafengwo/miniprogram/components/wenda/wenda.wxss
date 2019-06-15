@@ -1,0 +1,22 @@
+/* components/wenda/wenda.wxss */
+.box{
+  border-bottom: 1px solid #efefef;
+  padding: 20rpx 30rpx;
+  background: #fff;
+  
+}
+.box .title{
+  font-size: 32rpx;
+  font-weight: 700;
+}
+.box .content{
+  font-size: 28rpx;
+  margin: 12rpx auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.box .others{
+  font-size: 22rpx;
+} 

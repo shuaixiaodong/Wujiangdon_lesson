@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/launch/launch",
+    "pages/index/index",
+    "pages/my/my",
+    "pages/personal/personal",
+    "pages/setting/setting",
+    "pages/about/about",
+    "pages/feidian/feidian",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/xiaoce/xiaoce",
+    "pages/post/post",
+    "pages/favorate/favorate",
+    "pages/readHistory/readHistory",
+    "pages/collectionSet/collectionSet",
+    "pages/myPins/myPins",
+    "pages/feedback/feedback",
+    "pages/infoCenter/infoCenter",
+    "pages/entry/entry",
+    "pages/purchasedXiaoce/purchasedXiaoce",
+    "pages/originalPost/originalPost",
+    "pages/sharePost/sharePost",
+    "pages/articleData/articleData",
+    "pages/subscribedTag/subscribedTag",
+    "pages/manageTag/manageTag",
+    "pages/dynamic/dynamic",
+    "pages/feidianDetail/feidianDetail",
+    "pages/miniqrcode/miniqrcode",
+    "pages/xiaocedetail/xiaocedetail",
+    "pages/probation/probation"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#3281ff",
+    "navigationBarTitleText": "掘金",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#abb4bf",
+    "selectedColor": "#3281ff",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "img/tab_home_normal.png",
+        "selectedIconPath": "img/tab_home.png"
+      },
+      {
+        "pagePath": "pages/feidian/feidian",
+        "text": "动态",
+        "iconPath": "img/tab_activity_normal.png",
+        "selectedIconPath": "img/tab_activity.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "img/tab_explore_normal.png",
+        "selectedIconPath": "img/tab_explore.png"
+      },
+      {
+        "pagePath": "pages/xiaoce/xiaoce",
+        "text": "小册",
+        "iconPath": "img/tab_xiaoce_normal.png",
+        "selectedIconPath": "img/tab_xiaoce.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/tab_profile_normal.png",
+        "selectedIconPath": "img/tab_profile.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

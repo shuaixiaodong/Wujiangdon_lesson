@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "navigation": "/components/navigation/index"
+    "youjiItem": "/components/youji/youji",
+    "wendaItem": "/components/wenda/wenda"
   }
 }

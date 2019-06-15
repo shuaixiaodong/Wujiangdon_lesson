@@ -1,0 +1,8 @@
+<!--components/wenda/wenda.wxml-->
+<view class='box' wx:for='{{box}}' wx:key='{{index}}' data-id='{{item.id}}'>
+    <view class='title'>{{item.title}}</view>
+    <view class='content'>{{item.content}}</view>
+    <view class='others'>
+      <text>{{item.browse}}浏览 · {{item.response}}回答</text>
+    </view>
+  </view>

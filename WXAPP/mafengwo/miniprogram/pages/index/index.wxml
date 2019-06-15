@@ -1,39 +1,69 @@
 <!--miniprogram/pages/index/index.wxml-->
-<view class='top'>
-  <view class='top-left'>
-    <view class='top-left-above'>马蜂窝-旅行地</view>
-    <view class='top-left-below'>南昌</view>
-  </view>
-  <view class='top-right'>
-    <view class='top-right-above'>过去24小时</view>
-    <view class='top-right-middle'>5665人在这里旅行</view>
-    <view class='top-right-below'>
-      <image src='{{imgUrl}}'></image>
+<view class='container'>
+  <view class='top'>
+    <view class='top-left'>
+      <view class='top-left-above'>马蜂窝-旅行地</view>
+      <view class='top-left-below'>南昌</view>
+    </view>
+    <view class='top-right'>
+      <view class='top-right-above'>过去24小时</view>
+      <view class='top-right-middle'>5665人在这里旅行</view>
+      <view class='top-right-below'>
+        <image src='{{imgUrl}}'></image>
+      </view>
     </view>
   </view>
-</view>
 
-<scroll-view scroll-x="true" class="swiper-tab" scroll-left="{{scrollLeft}}">
-  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">必体验</view>
-  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">攻略</view>
-  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">游记</view>
-  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">问答</view>
-</scroll-view>
+  <scroll-view scroll-x="true" class="swiper-tab" scroll-left="{{scrollLeft}}">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">必体验</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">攻略</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">游记</view>
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">问答</view>
+  </scroll-view>
 
-<view class='swiper-box'>
-  <view wx:for="{{itemTab}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap='switchTab' class="cate-list {{curIndex === index?'on':''}}">
-    {{item.name}}
-  </view>
-  <scroll-view class='itemList' scroll-y="{{toView}}">
-    <view class="place">
-          <view class="place-list" wx:for="{{detail}}" wx:key="index" wx:for-item="place">
-              <image src="{{thumb}}"></image>
-              <view class="classname">
-                <text>{{place.name1}}</text>
-                <text>{{place.name2}}</text>
-                <text>{{place.name3}}</text>
-              </view>
+  <swiper class='swiper-lists' bindtap='switchTab' current='{{currentTab}}'>
+    <swiper-item class='swiper-list' bindtap='switchTab'>
+      <view class='cate'>
+        <view wx:for="{{itemTab}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap='switchTab' class="cate-list {{curIndex === index?'on':''}}">
+          {{item.name}}
+        </view>
+      </view>
+      <view class='info-list'>
+        <view class='info-list-content' wx:for='{{lists}}' wx:key="index" wx:for-item="list">
+          <navigator url='../indexDetail/indexDetail'>
+            <image src='{{list.thumb}}'></image>
+            <view class='classname'>
+              <text style='display:block;font-size:36rpx;font-weight:700;'>{{list.name}}</text>
+              <text style='display:block;font-weight:400,margin:50rpx;'>{{list.num}}人体验过</text>
+              <text style='display:block;color:red;'>{{list.info}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+
+    </swiper-item>
+    <swiper-item class='swiper-box'>
+      <view class='list' wx:for='{{list2}}' wx:key='{{index}}' data-id='{{item._id}}' catchtap='toGonlveDetail'>
+        <image class='poster' src='{{item.img}}'></image>
+        <view class='info'>
+          <view class='title'>{{item.title}}</view>
+          <view class='others'>
+            <view>
+              <text>{{item.browse}}浏览 · {{item.collect}}收藏</text>
+            </view>
           </view>
         </view>
-  </scroll-view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <youjiItem list="{{youjiList}}"></youjiItem>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <wendaItem box="{{wendaBox}}"></wendaItem>
+    </swiper-item>
+  </swiper>
+
+
 </view>

@@ -1,0 +1,16 @@
+<!--components/youji/youji.wxml-->
+<view class='list' wx:for='{{list}}' wx:key='{{index}}' data-id='{{item._id}}' catchtap='toYoujiDetail'>
+  <image class='poster' src='{{item.img}}'></image>
+  <view class='info'>
+    <view class='title'>{{item.title}}</view>
+    <view class='author'>
+      <image src='{{item.photo}}' class='photo'></image>
+      <view class='name'>{{item.name}}</view>
+    </view>
+    <view class='others'>
+      <view>
+        <text>{{item.browse}}浏览 · {{item.collect}}收藏</text>
+      </view>
+    </view>
+  </view>
+</view>
