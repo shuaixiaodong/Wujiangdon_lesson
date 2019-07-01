@@ -3,13 +3,15 @@
     "pages/index/index",
     "pages/mine/mine",
     "pages/indexDetail/indexDetail",
-    "pages/strategeDetail/strategeDetail"
+    "pages/strategeDetail/strategeDetail",
+    "pages/chooseCity/chooseCity"
   ],
   "window": {
     "backgroundColor": "#364999",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#364999",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#364999"
   },
   "tabBar": {
     "list": [

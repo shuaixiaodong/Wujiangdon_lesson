@@ -1,9 +1,13 @@
 <!--miniprogram/pages/index/index.wxml-->
 <view class='container'>
-  <view class='top'>
+  <view class='navbar'>
+    <searchBox></searchBox>
+  </view>
+  <view class='top' id='top' style='padding-top:60px;'>
     <view class='top-left'>
       <view class='top-left-above'>马蜂窝-旅行地</view>
-      <view class='top-left-below'>南昌</view>
+      <view class='top-left-below' bindtap='chooseCity'>南昌</view>
+      <view class='top-left-choose' bindtap='chooseCity'></view>
     </view>
     <view class='top-right'>
       <view class='top-right-above'>过去24小时</view>
@@ -64,6 +68,5 @@
       <wendaItem box="{{wendaBox}}"></wendaItem>
     </swiper-item>
   </swiper>
-
 
 </view>

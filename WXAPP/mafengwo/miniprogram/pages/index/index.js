@@ -187,6 +187,11 @@ Page({
       }
     });
   },
+  // onLoad: function (options) {
+  //   this.setData({
+  //     navH: App.globalData.navHeight
+  //   })
+  // },
   switchTab(e) {
     // console.log(e)
     this.setData({
@@ -224,6 +229,14 @@ Page({
     wx.navigateTo({
       url: `/pages/strategeDetail/strategeDetail?id=${e.currentTarget.dataset.id}`,
     })
+  },
+  chooseCity(e) {
+    wx.navigateTo({
+      url: `/pages/chooseCity/chooseCity?id=${e.currentTarget.dataset.id}`,
+    })
+  },
+  changeTabsColor(e) {
+    let curId = this.data.itemTab.id;
   }
   // changeItem: function (e) {
   //   if ("touch" === e.detail.source) {

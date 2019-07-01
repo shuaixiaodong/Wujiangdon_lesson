@@ -1,12 +1,20 @@
 /* miniprogram/pages/index/index.wxss */
-page{
+
+page {
   width: 100%;
   height: 100%;
 }
-.container{
+
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
+.container {
   width: 100%;
   height: 100%;
 }
+
 .top {
   width: 100%;
   height: 150rpx;
@@ -15,7 +23,7 @@ page{
 
 .top-left {
   position: absolute;
-  top: 20rpx;
+  top: 140rpx;
   left: 10rpx;
   bottom: 30rpx;
   color: white;
@@ -27,6 +35,19 @@ page{
 
 .top-left-below {
   font-size: 60rpx;
+}
+
+.top-left-choose {
+  float: right;
+  margin-top: -36rpx;
+  margin-left: -10rpx;
+  width: 0;
+  height: 0;
+  border-bottom: 12rpx solid transparent;
+  border-left: 12rpx solid transparent;
+  border-right: 12rpx solid transparent;
+  border-top: 12rpx solid #fff;
+  clear: both;
 }
 
 .top-right {
@@ -67,28 +88,30 @@ page{
   border-bottom: 5rpx solid #da7c0c;
 }
 
-.swiper-lists{
+.swiper-lists {
   width: 100%;
   height: 100%;
 }
+
 .swiper-list {
   display: flex;
   flex-direction: column;
   font-size: 36rpx;
   width: 100%;
 }
+
 /* 
 .swiper-list view {
   text-align: center;
 } */
 
-.cate{
+.cate {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.cate-list{
+.cate-list {
   background-color: #ffdc2f;
   height: 60rpx;
   width: 100rpx;
@@ -108,18 +131,19 @@ page{
   margin-top: 20rpx;
 }
 
-.info-list-content{
+.info-list-content {
   margin-bottom: 0;
 }
 
-image{
+image {
   width: 320rpx;
   height: 210rpx;
   border-radius: 10rpx;
 }
 
-.classname{
+.classname {
   font-size: 28rpx;
+  margin-bottom: 16rpx;
 }
 
 .list {
@@ -129,9 +153,11 @@ image{
   padding: 20rpx 30rpx;
   background: #fff;
 }
+
 .list:last-child {
   border-bottom: none;
 }
+
 .list .info {
   height: 150rpx;
   flex: 1;
@@ -140,11 +166,13 @@ image{
   flex-direction: column;
   justify-content: space-between;
 }
+
 .list .poster {
   width: 230rpx;
   height: 150rpx;
-  box-shadow: 3px 4px 12px 0 rgba(0,0,0,.2);
+  box-shadow: 3px 4px 12px 0 rgba(0, 0, 0, 0.2);
 }
+
 .list .title {
   font-size: 30rpx;
   font-weight: 700;
@@ -153,11 +181,8 @@ image{
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+
 .list .others {
   font-size: 22rpx;
   /* color: #9999; */
 }
-
-
-
-

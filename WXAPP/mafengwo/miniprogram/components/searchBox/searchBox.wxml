@@ -1,0 +1,9 @@
+<!--components/searchBox/searchBox.wxml-->
+<view class='page_row' bindtap="suo">
+  <view class="search">
+    <view class="df search_arr">
+      <!-- <icon class="searchcion" size='20' type='search'></icon> -->
+      <input class="" disabled placeholder="搜索目的地/景点/攻略" value="{{searchValue}}" />
+    </view>
+  </view>
+</view>

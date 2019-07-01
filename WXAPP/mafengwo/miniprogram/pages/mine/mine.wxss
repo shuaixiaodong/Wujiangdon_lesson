@@ -1,1 +1,50 @@
 /* miniprogram/pages/mine/mine.wxss */
+.wrapper{
+  padding-top: 20rpx;
+}
+.userinfo{
+  height: 230rpx;
+}
+.userinfo-avatar{
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 50%;
+  margin-left: 40rpx; 
+}
+.userinfo-nickname{
+  font-size: 48rpx;
+}
+.collect{
+  width: 100%;
+}
+.collect-title{
+  margin-left: 40rpx;
+}
+.collect-detail{
+  margin-top: 40rpx;
+}
+.swiper-tab {
+  width: 96%;
+  border-bottom: 2rpx solid rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 80rpx;
+  border-bottom-color: #f0f1f3;
+}
+
+.swiper-tab-list {
+  font-size: 32rpx;
+  display: inline-block;
+  width: 16%;
+  color: #777;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-lists {
+  width: 100%;
+  height: 100%;
+}
+

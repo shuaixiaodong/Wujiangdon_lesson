@@ -55,6 +55,10 @@ let baseWebpackConfig = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader!stylus-loader'
+      },
+      {
         test: /\.vue$/,
         loader: 'mpvue-loader',
         options: vueLoaderConfig
