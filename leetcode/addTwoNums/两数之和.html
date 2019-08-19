@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //  var twoSum = function(nums,target) {
+  //    for(let i=0;i<nums.length;i++) {
+  //      let cur = nums[i];
+  //      for(j=i+1;j<nums.length;j++) {
+  //        if(cur+nums[j] === target) {
+  //          return [i,j]
+  //        }
+  //      }
+  //    }
+  //  } 
+  // let map1 = new Map();
+  // var newMap = {
+  //   '2': 0,
+  //   '7': 1,
+  //   '11': 2,
+  //   '5': 3
+  // } 
+  // for(let i=0;i<nums.length;i++)
+
+  var twoSum = function(nums,target) {
+    // 给所有的数建立 map
+    let map = new Map();
+    let arr = [];
+    for(let i in nums) {
+      map.set(nums[i],i)
+    }
+    for(let j=0;j<nums.length;j++) {
+      if(map.has(target-nums[j]) && map.get(target-nums[j]) !== j) {
+       arr.push(j,map.get(target-nums[j]))
+       return arr
+      }
+    }
+  }
+  </script>
+</body>
+</html>

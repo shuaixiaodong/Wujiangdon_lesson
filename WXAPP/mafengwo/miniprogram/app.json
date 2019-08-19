@@ -4,7 +4,8 @@
     "pages/mine/mine",
     "pages/indexDetail/indexDetail",
     "pages/strategeDetail/strategeDetail",
-    "pages/chooseCity/chooseCity"
+    "pages/chooseCity/chooseCity",
+    "pages/search/search"
   ],
   "window": {
     "backgroundColor": "#364999",

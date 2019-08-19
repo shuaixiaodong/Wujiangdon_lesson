@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "navbar": "/components/navbar/navbar",
+    "searchBox": "/components/searchBox/searchBox"
+  },
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "马蜂窝旅游"
+}

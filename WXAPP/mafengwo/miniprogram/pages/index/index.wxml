@@ -6,19 +6,19 @@
   <view class='top' id='top' style='padding-top:60px;'>
     <view class='top-left'>
       <view class='top-left-above'>马蜂窝-旅行地</view>
-      <view class='top-left-below' bindtap='chooseCity'>南昌</view>
+      <view class='top-left-below' bindtap='chooseCity'>{{city}}</view>
       <view class='top-left-choose' bindtap='chooseCity'></view>
     </view>
     <view class='top-right'>
       <view class='top-right-above'>过去24小时</view>
       <view class='top-right-middle'>5665人在这里旅行</view>
-      <view class='top-right-below'>
+      <view class='top-right-below' wx:for="imgUrl">
         <image src='{{imgUrl}}'></image>
       </view>
     </view>
   </view>
 
-  <scroll-view scroll-x="true" class="swiper-tab" scroll-left="{{scrollLeft}}">
+  <scroll-view scroll-x="true" class="swiper-tab {{menuFixed ? 'fixed': ''}}" id='scroll' scroll-left="{{scrollLeft}}">
     <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">必体验</view>
     <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">攻略</view>
     <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">游记</view>
@@ -28,7 +28,7 @@
   <swiper class='swiper-lists' bindtap='switchTab' current='{{currentTab}}'>
     <swiper-item class='swiper-list' bindtap='switchTab'>
       <view class='cate'>
-        <view wx:for="{{itemTab}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap='switchTab' class="cate-list {{curIndex === index?'on':''}}">
+        <view wx:for="{{itemTab}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap='findNav' class="cate-list {{curIndex === index?'up':''}}">
           {{item.name}}
         </view>
       </view>

@@ -62,10 +62,17 @@ page {
 
 .top-right-middle {
   font-size: 30rpx;
+  margin-bottom: 10rpx;
 }
 
 .top-right-below {
   display: inline-block;
+   margin-bottom: 10rpx;
+}
+.top-right-below image{
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 50%;
 }
 
 .swiper-tab {
@@ -74,6 +81,10 @@ page {
   text-align: center;
   line-height: 80rpx;
   border-bottom-color: #f0f1f3;
+}
+.fixed{
+  position: fixed;
+  top: 0;
 }
 
 .swiper-tab-list {
@@ -110,9 +121,8 @@ page {
   display: flex;
   flex-direction: row;
 }
-
 .cate-list {
-  background-color: #ffdc2f;
+  background-color: whitesmoke;
   height: 60rpx;
   width: 100rpx;
   line-height: 60rpx;
@@ -122,6 +132,9 @@ page {
   margin: 25rpx 15rpx 35rpx 37rpx;
 }
 
+.up{
+  background-color: #ffdc2f;
+}
 .info-list {
   height: 100%;
   display: flex;

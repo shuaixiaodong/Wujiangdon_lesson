@@ -5,7 +5,9 @@ Page({
     winWidth: 0,
     winHeight: 0,
     currentTab: 0,
-    youjiList : [],
+    youjiList: [],
+    city: '南昌',
+    imgUrl: '/images/gl1.jpg',
     itemTab: [{
         name: '景点',
         id: 'jingdian'
@@ -19,163 +21,12 @@ Page({
         id: 'meishi'
       }
     ],
-    lists: [{
-        thumb: '/images/twg.jpeg',
-        name: '滕王阁',
-        num: '1849',
-        info: '江南三大景区之一'
-      },
-      {
-        thumb: '/images/twg.jpeg',
-        name: '滕王阁',
-        num: '1849',
-        info: '江南三大景区之一'
-      },
-      {
-        thumb: '/images/twg.jpeg',
-        name: '滕王阁',
-        num: '1849',
-        info: '江南三大景区之一'
-      },
-      {
-        thumb: '/images/twg.jpeg',
-        name: '滕王阁',
-        num: '1849',
-        info: '江南三大景区之一'
-      },
-      {
-        thumb: '/images/twg.jpeg',
-        name: '滕王阁',
-        num: '1849',
-        info: '江南三大景区之一'
-      },
-      {
-        thumb: '/images/twg.jpeg',
-        name: '滕王阁',
-        num: '1849',
-        info: '江南三大景区之一'
-      },
-
-      // { thumb: '', name: '', num: '', info: '' }
-    ],
-    list2: [{
-        img: '/images/gl1.jpg',
-        title: '南昌黄马银杏林攻略',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '南昌黄马银杏林攻略',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '南昌黄马银杏林攻略',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '南昌黄马银杏林攻略',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '南昌黄马银杏林攻略',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '南昌黄马银杏林攻略',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '南昌黄马银杏林攻略',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '南昌黄马银杏林攻略',
-        browse: '4353',
-        collect: '41'
-      },
-    ],
-    youjiList: [
-      {
-        img: '/images/gl1.jpg',
-        title: '物华天宝豫章郡，人杰地灵英雄城',
-        photo: '/images/gl1.jpg',
-        name: '心随你动',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '物华天宝豫章郡，人杰地灵英雄城',
-        photo: '/images/gl1.jpg',
-        name: '心随你动',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '物华天宝豫章郡，人杰地灵英雄城',
-        photo: '/images/gl1.jpg',
-        name: '心随你动',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '物华天宝豫章郡，人杰地灵英雄城',
-        photo: '/images/gl1.jpg',
-        name: '心随你动',
-        browse: '4353',
-        collect: '41'
-      },
-      {
-        img: '/images/gl1.jpg',
-        title: '物华天宝豫章郡，人杰地灵英雄城',
-        photo: '/images/gl1.jpg',
-        name: '心随你动',
-        browse: '4353',
-        collect: '41'
-      },
-    ],
-    wendaBox: [
-      {
-        title: '南昌适合孩子玩的地方有推荐吗？',
-        content: '题主你好，南昌适合孩子玩的地方还挺多：1、万达海洋公园，位于南昌市万达文化旅游城里面的万达茂内，设有海洋剧场、儿童海洋科学体验中心、冷水海洋，热带海洋、深海明珠等7大主题水池展区，精彩的海洋动物表演及互动节目，让大人和孩子共度欢乐时光。',
-        browse: '67875',
-        response: '76'
-      },
-      {
-        title: '南昌适合孩子玩的地方有推荐吗？',
-        content: '题主你好，南昌适合孩子玩的地方还挺多：1、万达海洋公园，位于南昌市万达文化旅游城里面的万达茂内，设有海洋剧场、儿童海洋科学体验中心、冷水海洋，热带海洋、深海明珠等7大主题水池展区，精彩的海洋动物表演及互动节目，让大人和孩子共度欢乐时光。',
-        browse: '67875',
-        response: '76'
-      },
-      {
-        title: '南昌适合孩子玩的地方有推荐吗？',
-        content: '题主你好，南昌适合孩子玩的地方还挺多：1、万达海洋公园，位于南昌市万达文化旅游城里面的万达茂内，设有海洋剧场、儿童海洋科学体验中心、冷水海洋，热带海洋、深海明珠等7大主题水池展区，精彩的海洋动物表演及互动节目，让大人和孩子共度欢乐时光。',
-        browse: '67875',
-        response: '76'
-      },
-      {
-        title: '南昌适合孩子玩的地方有推荐吗？',
-        content: '题主你好，南昌适合孩子玩的地方还挺多：1、万达海洋公园，位于南昌市万达文化旅游城里面的万达茂内，设有海洋剧场、儿童海洋科学体验中心、冷水海洋，热带海洋、深海明珠等7大主题水池展区，精彩的海洋动物表演及互动节目，让大人和孩子共度欢乐时光。',
-        browse: '67875',
-        response: '76'
-      },
-    ]
+    lists: [],
+    list2: [],
+    youjiList: [],
+    wendaBox: []
   },
+
   onLoad: function() {
     var that = this;
     wx.getSystemInfo({
@@ -186,6 +37,59 @@ Page({
         });
       }
     });
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5ca4580c4767c3737055c913/example/mafengwo',
+      success: function(res) {
+        console.log(res.data);
+        that.setData({
+          lists: res.data.data.lists,
+          list2: res.data.data.list2,
+          wendaBox: res.data.data.wendaBox,
+          youjiList: res.data.data.youjiList
+        }); //和页面进行绑定可以动态的渲染到页面
+
+      },
+      fail: function(res) {
+        console.log(res.data);
+        // this.userData = "数据获取失败";
+      }
+    })
+  },
+  onShow: function () {
+    var that = this;
+    var query = wx.createSelectorQuery()//创建节点查询器 query
+    query.select('#scroll').boundingClientRect()//这段代码的意思是选择Id= the - id的节点，获取节点位置信息的查询请求
+    query.exec(function (res) {
+      console.log(res[0].top); // #scroll节点的上边界坐
+      that.setData({
+        menuTop: res[0].top
+      })
+    });
+  },
+  // 2.监听页面滚动距离scrollTop
+  onPageScroll: function (e) {
+    // console.log(e.scrollTop);
+    var that = this;
+    // 3.当页面滚动距离scrollTop > menuTop菜单栏距离文档顶部的距离时，菜单栏固定定位
+    if (e.scrollTop > that.data.menuTop) {
+      that.setData({
+        menuFixed: true
+      })
+    } else {
+      that.setData({
+        menuFixed: false
+      })
+    }
+  },
+  findNav(e) {
+    var that = this;
+    if (this.data.curIndex === e.target.dataset.index) {
+      return false;
+    } else {
+      that.setData({
+        curIndex: e.target.dataset.index
+      })
+    }
   },
   // onLoad: function (options) {
   //   this.setData({

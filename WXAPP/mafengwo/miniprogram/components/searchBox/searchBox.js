@@ -18,6 +18,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    toSearch(e) {
+      wx.navigateTo({
+        url: `/pages/search/search?id=${e.currentTarget.dataset.id}`,
+      })
+    }
   }
 })

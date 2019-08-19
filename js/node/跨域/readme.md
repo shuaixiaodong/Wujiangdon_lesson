@@ -32,4 +32,20 @@ B -> proxy -> google.com
 ## iframe + window.name
 iframe 共享 window.name
 
+没有 postMessage 只能借助中间的页面通知前端页面 window.parent.callback(window.name)
+
 ## jsonp
+1. 定义一个回调
+2. 将回调函数的名字 告诉后端 后端会返回 
+   ```js
+   回调(res)
+   ```
+3. script 标签 加载过后 执行 返回的内容
+
+缺点：只能发起 get
+
+写一个 jsonp 的函数，以promise的方式调用
+json(url)
+.then(res => {
+
+})

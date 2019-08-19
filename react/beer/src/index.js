@@ -14,4 +14,3 @@ const Root = function() {
 }
 
 render(<Root />,document.getElementById('root'));
-
